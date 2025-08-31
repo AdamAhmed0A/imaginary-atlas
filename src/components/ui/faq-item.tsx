@@ -11,8 +11,11 @@ interface FAQItemProps {
 export const FAQItem = ({ question, answer, index }: FAQItemProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
+  console.log(isOpen);
+
+
   return (
-    <div 
+    <div
       className={cn(
         "group relative overflow-hidden rounded-2xl backdrop-blur-md transition-all duration-500",
         "bg-card/20 border border-border/30 hover:border-primary/50",
@@ -21,10 +24,10 @@ export const FAQItem = ({ question, answer, index }: FAQItemProps) => {
       )}
       style={{ animationDelay: `${index * 100}ms`, animationFillMode: 'both' }}
     >
-      <div className="absolute inset-0 bg-neon-gradient opacity-0 group-hover:opacity-10 transition-opacity duration-500" />
-      
-      <button
-        onClick={() => setIsOpen(!isOpen)}
+      <button className="absolute inset-0 bg-neon-gradient opacity-0 group-hover:opacity-10 transition-opacity duration-500" onClick={() => setIsOpen(!isOpen)} />
+
+      <div
+        
         className="w-full p-6 text-left transition-all duration-300 group-hover:text-foreground"
       >
         <div className="flex items-center justify-between">
@@ -36,7 +39,7 @@ export const FAQItem = ({ question, answer, index }: FAQItemProps) => {
           </div>
           <div className="flex items-center gap-2">
             <Sparkles className="w-4 h-4 text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            <ChevronDown 
+            <ChevronDown
               className={cn(
                 "w-5 h-5 text-muted-foreground transition-all duration-300",
                 isOpen && "transform rotate-180 text-primary"
@@ -44,9 +47,9 @@ export const FAQItem = ({ question, answer, index }: FAQItemProps) => {
             />
           </div>
         </div>
-      </button>
-      
-      <div 
+      </div>
+
+      <div
         className={cn(
           "overflow-hidden transition-all duration-500 ease-in-out",
           isOpen ? "max-h-[500px] opacity-100 pb-6" : "max-h-0 opacity-0 pb-0"
