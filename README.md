@@ -26,10 +26,3 @@ This project demonstrates smooth expand/collapse animations, responsive design, 
 ## 📸 Preview  
 ![FAQ Preview](screenshot.png)  
 *(Replace `screenshot.png` with your project screenshot)*  
-
----
-
-## 🚀 How to Run  
-1. Clone the repository:  
-   ```bash
-   git clone https://github.com/your-username/faq-section.git
