@@ -19,7 +19,7 @@ export const FAQItem = ({ question, answer, index }: FAQItemProps) => {
         "hover:shadow-glow hover:scale-[1.02] animate-fade-in-up",
         isOpen && "bg-card/40 shadow-neon"
       )}
-      style={{ animationDelay: `${index * 100}ms` }}
+      style={{ animationDelay: `${index * 100}ms`, animationFillMode: 'both' }}
     >
       <div className="absolute inset-0 bg-neon-gradient opacity-0 group-hover:opacity-10 transition-opacity duration-500" />
       
@@ -29,7 +29,7 @@ export const FAQItem = ({ question, answer, index }: FAQItemProps) => {
       >
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-2 h-2 rounded-full bg-primary animate-pulse-glow" />
+            <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
             <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
               {question}
             </h3>
@@ -49,14 +49,16 @@ export const FAQItem = ({ question, answer, index }: FAQItemProps) => {
       <div 
         className={cn(
           "overflow-hidden transition-all duration-500 ease-in-out",
-          isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          isOpen ? "max-h-[500px] opacity-100 pb-6" : "max-h-0 opacity-0 pb-0"
         )}
       >
-        <div className="px-6 pb-6">
+        <div className="px-6">
           <div className="w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent mb-4" />
-          <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
-            {answer}
-          </p>
+          <div className="text-muted-foreground leading-relaxed text-sm md:text-base space-y-3">
+            {answer.split('\n').map((paragraph, idx) => (
+              <p key={idx}>{paragraph}</p>
+            ))}
+          </div>
         </div>
       </div>
     </div>

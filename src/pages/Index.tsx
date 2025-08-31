@@ -44,9 +44,9 @@ const Index = () => {
         <div className="text-center mb-16">
           <FloatingCard delay={200} className="inline-block mb-8">
             <div className="flex items-center gap-3 text-primary">
-              <Stars className="w-8 h-8 animate-pulse-glow" />
+              <Stars className="w-8 h-8" />
               <span className="text-sm font-medium tracking-wider uppercase">Nexus Portal Active</span>
-              <Stars className="w-8 h-8 animate-pulse-glow" />
+              <Stars className="w-8 h-8" />
             </div>
           </FloatingCard>
           
@@ -111,9 +111,9 @@ const Index = () => {
           <div className="text-center mb-12">
             <FloatingCard className="inline-block">
               <div className="flex items-center gap-2">
-                <Zap className="w-5 h-5 text-primary animate-pulse-glow" />
+                <Zap className="w-5 h-5 text-primary" />
                 <span className="text-lg font-semibold">Knowledge Database</span>
-                <Zap className="w-5 h-5 text-primary animate-pulse-glow" />
+                <Zap className="w-5 h-5 text-primary" />
               </div>
             </FloatingCard>
           </div>
