@@ -16,7 +16,7 @@ This project demonstrates smooth expand/collapse animations, responsive design, 
 ---
 
 ## 🛠️ Technologies Used  
-- **HTML5** for structure  
+- **React**   
 - **CSS3** for styling and transitions  
 - **JavaScript (Vanilla JS)** for toggle functionality  
 - **Google Fonts (Roboto, Arial)** for typography  
