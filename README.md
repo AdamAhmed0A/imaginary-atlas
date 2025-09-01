@@ -23,6 +23,5 @@ This project demonstrates smooth expand/collapse animations, responsive design, 
 
 ---
 
-## 📸 Preview  
-![FAQ Preview](screenshot.png)  
-*(Replace `screenshot.png` with your project screenshot)*  
+## view the project from here  
+!-https://imaginary-atlas.vercel.app/  
